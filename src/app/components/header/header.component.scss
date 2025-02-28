@@ -1,0 +1,36 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  gap: 24px
+}
+
+header .logo-container {
+  background-color: black;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+header .text-container h1 {
+  font-size: 34px;
+  color: var(--dark-grey);
+}
+
+header .text-container p {
+  color: var(--light-grey);
+}

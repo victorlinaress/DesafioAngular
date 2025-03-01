@@ -17,12 +17,15 @@
 
     <span> 18:01 às 23:00</span>
   </div>
-  <div>
-    <input type="checkbox" name="show-closed" />
-    <label>Exibir Unidade Fechadas</label>
-    <div class="button">
-      <button class="button-primary">Encontrar Unidade</button>
-      <button class="button-second">Limpar</button>
+  <div class="checkbox-wrapper">
+    <div class="checkbox">
+      <input type="checkbox" name="show-closed" />
+      <label>Exibir Unidade Fechadas</label>
+      <span>Resultados encontrados: {{results.length}}</span>
     </div>
+  </div>
+  <div class="btn-wrapper">
+    <button class="btn btn-primary">Encontrar Unidade</button>
+    <button class="btn btn-secondary">Limpar</button>
   </div>
 </form>

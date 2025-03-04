@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, output } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { GetUnitsService } from '../../services/get-units.service';
 import { Location } from '../../types/location.interface';
@@ -13,6 +13,7 @@ type Hour_Indexes = 'morning' | 'afternoon' | 'night'; // Horários permitidos
   styleUrls: ['./forms.component.scss'],
 })
 export class FormsComponent implements OnInit {
+  @Output() submitEvent = new EventEmitter();
   results: Location[] = []; // Unidades disponíveis
   filteredResults: Location[] = []; // Lista das unidades filtradas conforme o formulário
   formGroup!: FormGroup; // Formulário
@@ -44,6 +45,7 @@ export class FormsComponent implements OnInit {
       hour
     );
     this.uniteService.setfilteredUnits(this.filteredResults);
+    this.submitEvent.emit()
 
   }
 

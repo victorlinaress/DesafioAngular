@@ -31,26 +31,25 @@ export class FormsComponent implements OnInit {
     });
 
     this.uniteService.getAllUnits().subscribe((data) => {
-      this.results = data; // Armazena as unidades
-      this.filteredResults = data;
+      this.results = data; // vai atualuzar as unidades
+      this.filteredResults = data; //vai atualizar
     });
   }
 
   OnSubmit(): void {
-    let { showClosed, hour } = this.formGroup.value;
+    let { showClosed, hour } = this.formGroup.value; // extrai o valor do formulário
 
-    this.filteredResults = this.filterUnitsService.filter(
+    this.filteredResults = this.filterUnitsService.filter(//cha,ma  o filtro para receber as unidades filtrados
       this.results,
       showClosed,
       hour
     );
-    this.uniteService.setfilteredUnits(this.filteredResults);
-    this.submitEvent.emit()
-
+    this.uniteService.setfilteredUnits(this.filteredResults);// atualiza e armarzena o valor
+    this.submitEvent.emit();//emite um evento
   }
 
   OnClear(): void {
-    this.formGroup.reset();
+    this.formGroup.reset(); //reseta o formulário
   }
 
 

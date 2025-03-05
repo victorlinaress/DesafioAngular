@@ -81,7 +81,7 @@ export class FilterUnitsService {
       const Close_Hour = OPENING_HOURS[hour as Hour_Indexes].last; // Horário de fechamento
 
       return intermediateResults.filter((location) =>
-        this.filterUnits(location, Open_Hour, Close_Hour)
+        this.filterUnits(location, Open_Hour, Close_Hour)//
       );
     }
 

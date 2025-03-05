@@ -24,14 +24,14 @@ export class GetUnitsService {
   }
 
   getAllUnits(): Observable<Location[]> {
-    return this.AllUnits$;
+    return this.AllUnits$; //recebe as unidades
   }
 
   getfilteredUnits () {
-    return this.filteredUnits;
+    return this.filteredUnits;//retorna as unidades filtradas
   }
 
   setfilteredUnits(value:Location[]) {
-    this.filteredUnits = value;
+    this.filteredUnits = value; //armazena e atualiza as unidades filtradas
   }
 }

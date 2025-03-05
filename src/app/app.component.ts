@@ -7,7 +7,7 @@ import { CardsListComponent } from './components/cards-list/cards-list.component
 import { CommonModule } from '@angular/common';
 import { GetUnitsService } from './services/get-units.service';
 import { Location } from './types/location.interface';
-import { LegendComponent } from "./compoments/legend/legend.component";
+import { LegendComponent } from "./components/legend/legend.component";
 import { FooterComponent } from "./components/footer/footer.component";
 
 @Component({

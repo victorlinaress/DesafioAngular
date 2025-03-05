@@ -14,5 +14,7 @@ export class CardsComponent {
 
     constructor() {}
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+      
+    }
 }

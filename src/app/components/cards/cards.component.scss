@@ -38,7 +38,6 @@ ul {
   flex-wrap: wrap;
   width: 100%;
   gap: 24px;
-
 }
 
 li {
@@ -47,10 +46,14 @@ li {
   color: var(--light-gray);
   font-weight: 500;
   font-size: 12px;
-
 }
 
 li b {
   font-size: 12px;
   color: var(--dark-grey);
+}
+
+.card img {
+  width: 50px;
+  display: flex;
 }
